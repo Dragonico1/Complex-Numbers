@@ -2,16 +2,25 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
 {
-    complex c1, c2, c3;
-    c1.re=1;
-    c1.im=1;
-    c2.re=1;
-    c2.im=2;
+    complex c1, c2;
+    double mod, arg;
+    c1.im = 2;
+    c1.re = 2;
+    mod = modulus(c1);
+    arg = argument(c1);
     display_complex_number(c1);
+    complex_from_mod_arg(mod, arg, &c2);
     display_complex_number(c2);
-    substraction(c1,c2,&c3);
-    display_complex_number(c3);
-    return(0);
+    return (0);
 }
